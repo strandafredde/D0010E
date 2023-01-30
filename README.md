@@ -1,2 +1,2 @@
 # D0010E
-Lab
+Labbar till kursen Objektorienterad programmering och design
