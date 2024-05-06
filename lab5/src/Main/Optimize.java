@@ -24,7 +24,7 @@ public class Optimize {
     private double K_Max;
     private long F;
     private Random rand;
-    private final int BREAKPOINT = 100;
+
 
     /**
      * Konstruktorn för optimeringsklassen för simuleringen.
@@ -87,19 +87,20 @@ public class Optimize {
      * @return det optimala antalet kassor.
      */
     public int M2(long seed){
-        int OPTIMAL_N = 0;
+        int OpitmalNumberOfCheckouts = 0;
         int prev_lostCustomers = 999;
-        for(int i = 2; i < M; i++) {
-            ShoppingState S = (ShoppingState) M1(i, seed);
-            if (S.getLostCustomers() < prev_lostCustomers) {
-                OPTIMAL_N = i;
+        for(int numberOfCheckouts = 2; numberOfCheckouts < M; numberOfCheckouts++) {
+            ShoppingState S = (ShoppingState) M1(numberOfCheckouts, seed);
+            int currentLostcustomers = S.getLostCustomers();
+            if (currentLostcustomers < prev_lostCustomers) {
+                OpitmalNumberOfCheckouts = numberOfCheckouts;
             }
             prev_lostCustomers = S.getLostCustomers();
 
             System.out.print("\n" + S.getLostCustomers());
         }
 
-        return OPTIMAL_N;
+        return OpitmalNumberOfCheckouts;
     }
 
     /**
@@ -113,21 +114,22 @@ public class Optimize {
     public int M3(int seed){
         rand = new Random(seed);
         int count = 0;
-        int OPTIMAL_N = 999;
-        while(count <= BREAKPOINT){
-            if (count == BREAKPOINT) {
+        int OptimalNumberOfCheckouts = 0;
+        while(count <= 100){
+            if (count >= 100) {
                 break;
                 } 
-            int OptN = M2(rand.nextInt());
-            if (OptN == OPTIMAL_N){
+            int numberOfCheckouts = M2(rand.nextInt());
+            if (numberOfCheckouts == OptimalNumberOfCheckouts){
                 count++;
             }
-            else if(OptN < OPTIMAL_N) {
-                OPTIMAL_N = OptN;
+            else if(numberOfCheckouts > OptimalNumberOfCheckouts) {
+                OptimalNumberOfCheckouts = numberOfCheckouts;
                 count = 0;
             }
+            count++;
         }
-        return OPTIMAL_N;
+        return OptimalNumberOfCheckouts;
     }
 
 }

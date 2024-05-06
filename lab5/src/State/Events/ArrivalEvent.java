@@ -9,7 +9,7 @@ import State.Customer;
  * @author Fredrik Larsson
  */
 public class ArrivalEvent extends Event {
-    Customer customer;
+    private Customer customer;
 
     /**
      * Detta är konstruktorn för ankomsthändelsen.

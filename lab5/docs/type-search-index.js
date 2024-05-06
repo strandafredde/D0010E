@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"State","l":"Customer"},{"p":"State","l":"CustomerFactory"},{"p":"State","l":"FIFOQueue"},{"p":"Main","l":"Main"},{"p":"Main","l":"Optimize"},{"p":"Main","l":"RunSim"},{"p":"State","l":"ShoppingState"},{"p":"Main","l":"Simulator"},{"p":"State","l":"State"}];updateSearchResults();

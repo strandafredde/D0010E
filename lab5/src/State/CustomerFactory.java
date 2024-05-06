@@ -3,7 +3,7 @@ package State;
 //import State.Customer;
 public class CustomerFactory {
 
-    int id = 0;
+    private int id = 0;
 
     /**
      * Used to get a new customer

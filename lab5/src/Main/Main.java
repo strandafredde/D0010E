@@ -14,8 +14,8 @@ public class Main {
      */
 
 
-    private static int whichSim = 4;
-    private static boolean optimizing = true;
+    private static int whichSim = 2;
+    private static boolean optimizing = false;
     public static void main(String[] args) {
         int N = 0, M = 0, F = 0;
         double S = 0.0, lambda = 0.0, P_Min = 0.0, P_Max = 0.0, K_Min = 0.0, K_Max = 0.0;
@@ -78,8 +78,8 @@ public class Main {
             Optimize SIM = new Optimize(N, M, S, lambda, P_Min, P_Max, K_Min, K_Max, F);
             System.out.print("===== Optimize result =====\n\n");
             System.out.printf("initial seed: %d \n", 1234);
-            System.out.printf("\nThe optimal register amount for given fixed values is: %d \n", SIM.M2(F));
-           // System.out.printf("\nThe optimal register amount across multiple random seeds: %d \n", SIM.M3(F));
+            //System.out.printf("\nThe optimal register amount for given fixed values is: %d \n", SIM.M2(F));
+            System.out.printf("\nThe optimal register amount across multiple random seeds: %d \n", SIM.M3(F));
             
         }
 

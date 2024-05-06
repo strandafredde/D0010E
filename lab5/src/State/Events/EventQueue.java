@@ -6,7 +6,7 @@ package State.Events;
  * @author Fredrik Larsson
  */
 public class EventQueue {
-    Node head;
+    private Node head;
 
     /**
      * Inre klass för Noder

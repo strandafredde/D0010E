@@ -7,7 +7,7 @@ import java.util.Observable;
  * Detta är den generella klassen för en state
  * Som blir ärvd av de  specfika staterna.
  */
-public class State extends Observable {
+public abstract class State extends Observable {
     private boolean brake = false;
     double currentTime = 0;
 

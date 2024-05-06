@@ -13,18 +13,14 @@ import State.Time.PickTime;
  */
 public class ShoppingState extends State {
 
-    /*================================================*/
-    /*                KÄLLVARIABLER                   */
-    /*================================================*/
-    FIFOQueue registerQueue = new FIFOQueue();
-    CustomerFactory CustomerFactory = new CustomerFactory();
-    ArrivalTime ArrivalTime;
-    PickTime PickTime;
-    PayTime PayTime;
+    /* ============= KÄLLVARIABLER =============*/
+    private FIFOQueue registerQueue = new FIFOQueue();
+    private CustomerFactory CustomerFactory = new CustomerFactory();
+    private ArrivalTime ArrivalTime;
+    private PickTime PickTime;
+    private PayTime PayTime;
 
-    /*================================================*/
-    /*                 FASTA VARIABLER                */
-    /*================================================*/
+    /* ============= FASTA VARIABLER ============= */
     private final int N;            /* Kassaregister */
     private final int M;            /* Butikskapacitet */
     private final double lambda;    /* Ankomstfrekvens */
@@ -35,9 +31,7 @@ public class ShoppingState extends State {
     private final double S;         /* Stängningstid */
     private final long F;           /* frö för tid */
 
-    /*================================================*/
-    /*              JUSTERBARE VARIABLER              */
-    /*================================================*/
+    /*============= JUSTERBARA VARIABLER =============*/
     private int finishedCustomers;          /* Kunder som är klara */
     private int lostCustomers;              /* Förlorade kunder */
     private double inactiveRegisterTime;    /* Tid som register har varit inaktiva */

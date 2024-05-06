@@ -9,7 +9,7 @@ import java.util.Observer;
  * när det observerbara objektet har uppdaterats.
  * @Author Fredrik Larsson
  */
-public class View implements Observer {
+public abstract class View implements Observer {
     
     public void update(Observable obs, Object obj) {
 

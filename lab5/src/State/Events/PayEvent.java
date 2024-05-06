@@ -11,7 +11,7 @@ import State.Customer;
  */
 public class PayEvent extends Event {
 
-    Customer customer;
+    private Customer customer;
     /**
      * Detta är konstruktorn för betalningshändelsen.
      * @param state Det specifika shoppingtillståndet.

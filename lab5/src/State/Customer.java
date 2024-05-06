@@ -5,7 +5,7 @@ package State;
  * @Author Fredrik Larsson
  */
 public class Customer {
-    int id;
+    private int id;
 
 
     /**

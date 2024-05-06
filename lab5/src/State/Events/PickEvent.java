@@ -11,7 +11,7 @@ import State.Customer;
  
  */
 public class PickEvent extends Event {
-    Customer customer;
+    private Customer customer;
     /**
      * Detta är konstruktorn för plockeventet.
      * @param state Det specifika shoppingtillståndet.
